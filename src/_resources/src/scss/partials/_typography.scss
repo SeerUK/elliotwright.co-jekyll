@@ -1,0 +1,128 @@
+/*
+ * This file is part of elliotwright.co
+ *
+ * (c) Elliot Wright <elliot@elliotwright.co>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/**
+ * Typography
+ */
+
+// Base
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    color: $text-base;
+    font: $font-base;
+}
+
+hr {
+    border: 0;
+    background: $white;
+    height: 2px;
+}
+
+a {
+    color: $text-muted;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+p,
+pre {
+    margin: 0 0 ($font-size-base * 1.4);
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+p + p {
+    text-indent: 50px;
+}
+
+blockquote {
+    border-left: 2px solid $white;
+    font-style: italic;
+    margin: 1em 0;
+    padding: 10px 40px;
+}
+
+blockquote * {
+    margin: 0;
+}
+
+
+// Support
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-nowrap { white-space: nowrap; }
+.text-ellipsis {
+    max-width: 1000px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-muted { color: $text-muted; }
+.text-info { color: $text-info; }
+.text-success { color: $text-success; }
+.text-warning { color: $text-warning; }
+.text-danger { color: $text-danger; }
+.text-special { color: $text-special; }
+.text-primary { color: $text-primary; }
+
+a.text-muted:hover { color: darken($text-muted, 20%); }
+a.text-info:hover { color: darken($text-info, 20%); }
+a.text-success:hover { color: darken($text-success, 20%); }
+a.text-warning:hover { color: darken($text-warning, 20%); }
+a.text-danger:hover { color: darken($text-danger, 20%); }
+a.text-special:hover { color: darken($text-special, 20%); }
+a.text-primary:hover { color: darken($text-primary, 20%); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $font-weight-light;
+}
+
+h1 {
+    font-size: $header-size-base * 2;
+}
+
+h2 {
+    font-size: $header-size-base * 1.5;
+}
+
+h3 {
+    font-size: $header-size-base * 1.25;
+}
+
+h4 {
+    font-size: $header-size-base * 1.125;
+}
+
+h5 {
+    font-size: $header-size-base;
+}
+
+h6 {
+    font-size: $header-size-base * 0.8;
+}
+
+.mono {
+    font: $font-mono;
+}

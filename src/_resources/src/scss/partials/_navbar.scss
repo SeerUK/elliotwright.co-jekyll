@@ -1,0 +1,253 @@
+/*
+ * This file is part of elliotwright.co
+ *
+ * (c) Elliot Wright <elliot@elliotwright.co>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/**
+ * Navbar
+ */
+
+.navbar {
+    @extend .clearfix;
+
+    background: $white;
+    font-size: 14px;
+    position: relative;
+
+    &.headroom {
+        transition: transform 200ms linear;
+    }
+    &.headroom--pinned {
+        transform: translateY(0%);
+    }
+    &.headroom--unpinned {
+        transform: translateY(-100%);
+    }
+}
+
+.navbar-collapse {
+    @extend .clearfix;
+
+    @include transition(all 0.35s ease);
+
+    height: 0;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+
+    &.open {
+        height: auto !important;
+    }
+
+    @include media(min-width $screen-tablet) {
+        display: block;
+        height: auto !important;
+        overflow: visible;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.navbar-fixed-top {
+    top: 0;
+}
+.navbar-fixed-bottom {
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    @include transition(all 0.2s ease);
+
+    color: $text-muted;
+    float: left;
+    font-weight: $font-weight-bold;
+    line-height: normal;
+    padding: 20px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        color: darken($text-muted, 10%);
+        text-decoration: none;
+    }
+}
+
+.navbar-header {
+    @extend .clearfix;
+
+    @include media(min-width $screen-tablet) {
+        float: left;
+    }
+}
+
+.navbar-nav {
+    @extend .clearfix;
+
+    list-style: none;
+    line-height: normal;
+    margin: 0 -20px;
+    padding: 0;
+
+    li {
+        @include transition(all 0.2s ease);
+
+        &.open > .navbar-link {
+            color: darken($text-muted, 10%);
+            background: darken($white, 3%);
+            text-decoration: none;
+        }
+
+        @include media(min-width $screen-tablet) {
+            float: left;
+        }
+    }
+}
+
+.navbar-link {
+    @include transition(all 0.2s ease);
+
+    color: $text-muted;
+    display: block;
+    padding: 20px;
+    width: 100%;
+
+    &:hover {
+        color: darken($text-muted, 10%);
+        background: darken($white, 3%);
+        text-decoration: none;
+    }
+
+    i {
+        margin-right: 5px;
+    }
+}
+
+.navbar-left {
+    @include media(min-width $screen-tablet) {
+        float: left;
+    }
+}
+.navbar-right {
+    @include media(min-width $screen-tablet) {
+        float: right;
+    }
+}
+
+.navbar-avatar {
+    border-radius: 50px;
+    display: inline-block;
+    height: 32px;
+    margin: -20px 10px -20px 0;
+    vertical-align: middle;
+    width: 32px;
+}
+
+$navbar-hamburger-duration: 0.35s;
+$navbar-hamburger-toggled-size: 0.75;
+$navbar-hamburger-width: 30px;
+
+.navbar-hamburger {
+    @include user-select(none);
+
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    transition: $navbar-hamburger-duration/2;
+
+    @include media(min-width $screen-tablet) {
+        display: none;
+    }
+
+    .navicon:before,
+    .navicon:after {
+        transition: $navbar-hamburger-duration/2;
+    }
+
+    &:hover {
+        transition: $navbar-hamburger-duration;
+
+        .navicon:before,
+        .navicon:after {
+            transition: $navbar-hamburger-duration/2;
+        }
+
+        .navicon:before {
+            top: 0.45em;
+        }
+
+        .navicon:after {
+            top: -0.45em;
+        }
+    }
+
+    .navicon {
+        background: $text-muted;
+        border-radius: 1em;
+        height: 2px;
+        position: relative;
+        transition: $navbar-hamburger-duration;
+        width: $navbar-hamburger-width;
+
+        &:before,
+        &:after {
+            background: $text-muted;
+            content: "";
+            display: block;
+            height: 2px;
+            position: absolute;
+            width: $navbar-hamburger-width;
+            z-index: 1;
+            transition: $navbar-hamburger-duration/2;
+            border-radius: 1em;
+        }
+
+        &:before {
+            top: 0.4em;
+        }
+
+        &:after {
+            top: -0.4em;
+        }
+    }
+
+    &.open {
+        & .navicon {
+            background: transparent;
+
+            &:before,
+            &:after {
+                background: $red;
+                top: 0;
+            }
+
+            &:before {
+                transform: rotate(-45deg);
+            }
+
+            &:after {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.navbar-nav {
+    .button {
+        margin: 8px;
+    }
+}

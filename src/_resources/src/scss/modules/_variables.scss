@@ -1,0 +1,68 @@
+/*
+ * This file is part of elliotwright.co
+ *
+ * (c) Elliot Wright <elliot@elliotwright.co>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/**
+ * Variables
+ */
+
+// Shades
+$black:      #2b303b;
+$charDark:   #343d46;
+$char:       #4f5b66;
+$charLight:  #65737e;
+$smokeDark:  #a7adba;
+$smoke:      #c0c5ce;
+$smokeLight: #dfe1e8;
+$white:      #eff1f5;
+
+// Colours
+$red:    #ef6155;
+$orange: #f99b15;
+$yellow: #fec418;
+$green:  #48b685;
+$cyan:   #5bc4bf;
+$blue:   #06b6ef;
+$purple: #815ba4;
+$pink:   #e96ba8;
+$brown:  #ab7967;
+
+
+// Typography
+$font-stack-sans:  "Alegreya Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-mono:  Inconsolata, monospace;
+$font-stack-base:  $font-stack-sans;
+
+$text-base:    $charDark;
+$text-muted:   $smokeDark;
+$text-primary: $blue;
+$text-success: $green;
+$text-create:  $cyan;
+$text-info:    $blue;
+$text-warning: $orange;
+$text-danger:  $red;
+$text-special: $purple;
+
+$font-weight-light:  300;
+$font-weight-normal: 400;
+$font-weight-bold:   700;
+
+$header-size-base: 20px;
+$font-size-base:   16px;
+$line-height-base: 1.3em;
+$font-size-mono:   16px;
+$line-height-mono: 20px;
+
+$font-base: $font-weight-normal #{$font-size-base}/#{$line-height-base} $font-stack-base;
+$font-mono: $font-weight-normal #{$font-size-mono}/#{$line-height-mono} $font-stack-mono;
+
+// Scaffolding
+$screen-phone: 480px;
+$screen-tablet: 768px;
+$screen-med: 992px;
+$screen-lar: 1200px;

@@ -1,0 +1,88 @@
+/*
+ * This file is part of elliotwright.co
+ *
+ * (c) Elliot Wright <elliot@elliotwright.co>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/**
+ * Article
+ */
+
+article {
+    @extend .clearfix;
+
+    font-size: 20px;
+    line-height: 1.5em;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    @include media(min-width $screen-tablet) {
+        width: $screen-tablet;
+    }
+
+    @include media(min-width $screen-med) {
+        width: $screen-med;
+    }
+}
+
+.article-title {
+    padding: 3em 0;
+
+    h1 {
+        color: $charLight;
+        font-size: 2em;
+        font-weight: $font-weight-light;
+        line-height: 1.2em;
+        margin: 0;
+    }
+
+    small {
+        color: $text-muted;
+        display: block;
+        font-weight: $font-weight-bold;
+    }
+
+    @include media(min-width $screen-tablet) {
+        padding: 3.5em 0;
+        h1 {
+            font-size: 2.5em;
+        }
+    }
+
+    @include media(min-width $screen-med) {
+        padding: 4em 0;
+
+        h1 {
+            font-size: 3em;
+        }
+    }
+}
+
+.article-content {
+    color: $charDark;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $cyan;
+        font-weight: $font-weight-light;
+        line-height: 1.2em;
+        margin: 0.6em 0;
+    }
+
+    p:first-child {
+        font-size: 1.2em;
+    }
+}
