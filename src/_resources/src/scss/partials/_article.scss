@@ -14,7 +14,7 @@
 .article-container {
     margin: 0 auto;
     padding: 0 $screen-gutter;
-    width: $screen-phone - $screen-gutter;
+    width: 100%;
 
     @include media(min-width $screen-tablet) {
         width: $screen-tablet - $screen-gutter;
