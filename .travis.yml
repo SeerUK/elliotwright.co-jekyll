@@ -19,3 +19,4 @@ install:
 script:
 - grunt
 - cd src && jekyll build
+- ansible --version
