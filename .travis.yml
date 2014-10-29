@@ -7,10 +7,13 @@ branches:
   - master
 
 before_install:
+- apt-get update
+- apt-get install -qq python-apt python-pycurl
 - gem install jekyll
 - npm install -g grunt-cli
 
 install:
+- pip install ansible
 - npm install
 
 script:
