@@ -1,7 +1,7 @@
 ---
 layout:     article
-title:      "Optimising Jekyll Workflow"
-subtitle:   "With Grunt"
+title:      "The one about my Jekyll workflow"
+subtitle:   "With as much automation as possible"
 author:     Elliot Wright
 date:       2014-10-28 20:12:35
 categories: jekyll

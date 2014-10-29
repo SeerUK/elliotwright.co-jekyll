@@ -1,22 +1,23 @@
 ---
 layout: default
-title: Home
+title: Articles
 ---
 
-<div class="home">
-    <h1 class="page-heading">Posts</h1>
-
-    <ul class="post-list">
-        {% for post in site.posts %}
-            <li>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-                <h2>
-                    <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
-                </h2>
-            </li>
-        {% endfor %}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-</div>
+<section class="article-list">
+    {% for post in site.posts %}
+        <section class="article-list-item">
+            <a class="article-list-link" href="{{ post.url }}">
+                <article class="article">
+                    <section class="article-head">
+                        <h1 class="article-title">{{ post.title }}</h1>
+                        <h2 class="article-subtitle">{{ post.subtitle }}</h2>
+                        <hr>
+                        <div class="article-meta">{% if post.author %}<em>By {{ post.author }}</em> &middot; {% endif %}Published {{ post.date | date: "%b %-d, %Y" }}</div>
+                        <section class="article-content">{{ post.excerpt }}</section>
+                    </section>
+                </article>
+            </a>
+        </section>
+        <hr>
+    {% endfor %}
+</section>

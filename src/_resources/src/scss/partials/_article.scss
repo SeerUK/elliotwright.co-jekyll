@@ -8,7 +8,7 @@
  */
 
 /**
- * Articles
+ * Article
  */
 
 .article-container {
@@ -26,7 +26,7 @@
 }
 
 .article-head {
-    padding: 100px 0 60px;
+    padding: 6.25em 0 3.75em;
 
     hr {
         background: $purple;
@@ -41,15 +41,19 @@
     line-height: 1;
     margin: 0;
     text-transform: uppercase;
+
+    & a {
+        color: inherit;
+    }
 }
 
 .article-title {
-    font-size: 60px;
+    font-size: 3.25em;
     font-weight: $font-weight-bold;
 }
 
 .article-subtitle {
-    font-size: 40px;
+    font-size: 2.25em;
     font-weight: $font-weight-normal;
 }
 
@@ -60,14 +64,14 @@
 }
 
 .article-content {
-    font-size: 17px;
+    font-size: 1em;;
     font-weight: $font-weight-light;
     line-height: 1.9em;
 
     blockquote,
     p,
     .gist {
-        margin-bottom: 40px;
+        margin-bottom: 2.5em;
     }
 
     *:last-child {
