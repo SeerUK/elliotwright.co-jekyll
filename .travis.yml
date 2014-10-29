@@ -7,14 +7,11 @@ branches:
   - development
 
 before_install:
-- sudo apt-get update
-- sudo apt-get install -qq python-apt python-pycurl
 - gem install jekyll
 - gem install html-proofer
 - npm install -g grunt-cli
 
 install:
-- sudo pip install ansible
 - npm install
 
 script:
@@ -22,4 +19,3 @@ script:
 - cd src
 - jekyll build
 - htmlproof ./_site
-- ansible --version
