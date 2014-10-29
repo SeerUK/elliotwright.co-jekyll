@@ -10,6 +10,7 @@ before_install:
 - sudo apt-get update
 - sudo apt-get install -qq python-apt python-pycurl
 - gem install jekyll
+- gem install html-proofer
 - npm install -g grunt-cli
 
 install:
@@ -19,4 +20,5 @@ install:
 script:
 - grunt
 - cd src && jekyll build
+- cd src && htmlproof ./_site
 - ansible --version
