@@ -4,7 +4,7 @@ rvm:
 
 branches:
   only:
-  - master
+  - development
 
 before_install:
 - sudo apt-get update
