@@ -13,7 +13,7 @@ before_install:
 - npm install -g grunt-cli
 
 install:
-- pip install ansible
+- sudo pip install ansible
 - npm install
 
 script:
