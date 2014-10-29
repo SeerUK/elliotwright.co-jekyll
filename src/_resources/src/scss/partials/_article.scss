@@ -53,9 +53,10 @@
     font-weight: $font-weight-normal;
 }
 
-.article-meta,
-.article-content {
+.article-content,
+.article-meta {
     font-family: $font-stack-serif;
+    font-weight: $font-weight-light;
 }
 
 .article-content {
