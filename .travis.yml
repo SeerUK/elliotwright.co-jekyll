@@ -7,8 +7,8 @@ branches:
   - master
 
 before_install:
-- apt-get update
-- apt-get install -qq python-apt python-pycurl
+- sudo apt-get update
+- sudo apt-get install -qq python-apt python-pycurl
 - gem install jekyll
 - npm install -g grunt-cli
 
