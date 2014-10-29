@@ -1,14 +1,14 @@
 <header class="navbar" role="navigation">
     <div class="navbar-header">
-        <a class="navbar-hamburger" data-collapse data-target=".pri-navbar-collapse">
+        <div class="navbar-hamburger" data-collapse data-target=".pri-navbar-collapse">
             <div class="navicon"></div>
-        </a>
+        </div>
         <a href="/" class="navbar-brand">{{ site.title }}</a>
     </div>
     <nav class="navbar-collapse pri-navbar-collapse" role="navigation">
         <ul class="navbar-nav navbar-right">
-            <li><a class="navbar-link" href="{{ "/about/" | prepend: site.baseurl }}">About</a></li>
-            <li><a class="navbar-link" href="#">Articles</a></li>
+            <li><a class="navbar-link" href="/about/">About</a></li>
+            <li><a class="navbar-link" href="/">Articles</a></li>
         </ul>
     </nav>
 </header>
