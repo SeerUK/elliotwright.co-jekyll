@@ -1,0 +1,49 @@
+/*
+ * This file is part of elliotwright.co
+ *
+ * (c) Elliot Wright <elliot@elliotwright.co>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/**
+ * Article List
+ */
+
+.article-list-item {
+    // font-size: 12px;
+    margin: 0 auto;
+    padding: 100px $screen-gutter;
+    width: 100%;
+
+    @include media(min-width $screen-tablet) {
+        width: $screen-tablet - $screen-gutter;
+    }
+
+    @include media(min-width $screen-med) {
+        width: $screen-med - $screen-gutter;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .article-head {
+        padding: 0;
+    }
+
+    .article-content {
+        line-height: 1.9em;
+        height: 5.7em;
+        overflow: hidden;
+    }
+
+    .article-meta {
+        margin-bottom: 20px;
+    }
+}
