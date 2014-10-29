@@ -35,6 +35,7 @@ $brown:  #ab7967;
 
 // Typography
 $font-stack-sans:  "Alegreya Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-serif: "Merriweather", serif;
 $font-stack-mono:  Inconsolata, monospace;
 $font-stack-base:  $font-stack-sans;
 
@@ -62,6 +63,7 @@ $font-base: $font-weight-normal #{$font-size-base}/#{$line-height-base} $font-st
 $font-mono: $font-weight-normal #{$font-size-mono}/#{$line-height-mono} $font-stack-mono;
 
 // Scaffolding
+$screen-gutter: 30px;
 $screen-phone: 480px;
 $screen-tablet: 768px;
 $screen-med: 992px;

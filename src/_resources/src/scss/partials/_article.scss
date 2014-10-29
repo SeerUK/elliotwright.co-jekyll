@@ -8,81 +8,68 @@
  */
 
 /**
- * Article
+ * Articles
  */
 
-article {
-    @extend .clearfix;
-
-    font-size: 20px;
-    line-height: 1.5em;
+.article-container {
     margin: 0 auto;
-    padding: 0 50px;
-
-    img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-    }
+    padding: 0 $screen-gutter;
+    width: $screen-phone - $screen-gutter;
 
     @include media(min-width $screen-tablet) {
-        width: $screen-tablet;
+        width: $screen-tablet - $screen-gutter;
     }
 
     @include media(min-width $screen-med) {
-        width: $screen-med;
+        width: $screen-med - $screen-gutter;
     }
+}
+
+.article-head {
+    padding: 100px 0 60px;
+
+    hr {
+        background: $purple;
+        height: 3px;
+        margin: 20px 0;
+        width: 50%;
+    }
+}
+
+.article-title,
+.article-subtitle {
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 .article-title {
-    padding: 3em 0;
+    font-size: 60px;
+    font-weight: $font-weight-bold;
+}
 
-    h1 {
-        color: $charLight;
-        font-size: 2em;
-        font-weight: $font-weight-light;
-        line-height: 1.2em;
-        margin: 0;
-    }
+.article-subtitle {
+    font-size: 40px;
+    font-weight: $font-weight-normal;
+}
 
-    small {
-        color: $text-muted;
-        display: block;
-        font-weight: $font-weight-bold;
-    }
-
-    @include media(min-width $screen-tablet) {
-        padding: 3.5em 0;
-        h1 {
-            font-size: 2.5em;
-        }
-    }
-
-    @include media(min-width $screen-med) {
-        padding: 4em 0;
-
-        h1 {
-            font-size: 3em;
-        }
-    }
+.article-meta,
+.article-content {
+    font-family: $font-stack-serif;
 }
 
 .article-content {
-    color: $charDark;
+    font-size: 17px;
+    font-weight: $font-weight-light;
+    line-height: 1.9em;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: $cyan;
-        font-weight: $font-weight-light;
-        line-height: 1.2em;
-        margin: 0.6em 0;
+    blockquote,
+    p,
+    .gist {
+        margin-bottom: 40px;
     }
 
-    p:first-child {
-        font-size: 1.2em;
+    *:last-child {
+        margin-bottom: 0;
     }
 }

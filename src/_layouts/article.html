@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<article class="article">
+    <section class="article-container">
+        <section class="article-head">
+            <h1 class="article-title">{{ page.title }}</h1>
+            <h2 class="article-subtitle">{{ page.subtitle }}</h2>
+            <hr>
+            <span class="article-meta">{% if page.author %}<em>By {{ page.author }}</em> &middot; {% endif %}Published {{ page.date | date: "%b %-d, %Y" }}</span>
+        </section>
+        <section class="article-content">
+            {{ content }}
+        </section>
+    </section>
+</article>

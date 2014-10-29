@@ -1,5 +1,5 @@
 <footer class="footer-social">
-    <div class="social-centered">
+    <div class="text-center">
         <ul class="social-items">
             <li><a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank"><i class="flaticon social facebook-1"></i></a></li>
             <li><a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="flaticon social github-1"></i></a></li>
@@ -8,4 +8,4 @@
     </div>
 </footer>
 
-<script src="js/scripts.js" type="text/javascript"></script>
+<script src="{{ "/js/scripts.js" | prepend: site.baseurl }}" type="text/javascript"></script>
