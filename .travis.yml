@@ -19,6 +19,7 @@ install:
 
 script:
 - grunt
-- cd src && jekyll build
-- cd src && htmlproof ./_site
+- cd src
+- jekyll build
+- htmlproof ./_site
 - ansible --version
