@@ -4,6 +4,7 @@ rvm:
 
 branches:
   only:
+  - master
   - development
 
 before_install:
@@ -22,4 +23,6 @@ script:
 - cd src
 - jekyll build
 - htmlproof ./_site
-- ansible --version
+
+deploy:
+- provider:
